@@ -39,8 +39,9 @@ class BasicTorchWithPathsDataset(BasicTorchDataset):
 
 
 class BaseDatasetInterface:
-    def __init__(self, root=None):
+    def __init__(self, root=None, class_column=None):
         self.root = root
+        self.class_column = class_column
         self._setup()
 
     @abstractmethod
