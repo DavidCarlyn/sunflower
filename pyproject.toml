@@ -8,22 +8,22 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
-    "accelerate>=1.9.0",
-    "captum>=0.8.0",
-    "diffusers>=0.34.0",
-    "grad-cam>=1.5.5",
-    "ipykernel>=6.30.0",
-    "matplotlib>=3.10.5",
-    "pandas>=2.3.1",
-    "pip>=25.2",
-    "rich>=14.1.0",
-    "saliency>=0.2.1",
-    "scipy>=1.16.1",
-    "torch>=2.7.1",
-    "torchvision>=0.22.1",
-    "tqdm>=4.67.1",
-    "trackio>=0.4.0",
-    "transformers>=4.54.1",
+    "accelerate",
+    "captum",
+    "diffusers",
+    "grad-cam",
+    "ipykernel",
+    "matplotlib",
+    "pandas",
+    "pip",
+    "rich",
+    "saliency",
+    "scipy",
+    "torch",
+    "torchvision",
+    "tqdm",
+    "trackio",
+    "transformers",
 ]
 
 [build-system]
