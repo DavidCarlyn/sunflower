@@ -92,7 +92,7 @@ class BaseDatasetInterface:
             )
 
     @abstractmethod
-    def get_class_names(self) -> int:
+    def get_class_names(self) -> list[str]:
         raise NotImplementedError(
             f"get_class_names function is not implemented in class {type(self).__name__}"
         )

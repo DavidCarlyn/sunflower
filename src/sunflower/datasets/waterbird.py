@@ -23,6 +23,8 @@ class WaterBirdDatasetInterface(BaseDatasetInterface):
             raise NotImplementedError(
                 "Please implement for class column 'background-fg'"
             )
+        elif self.class_column == "species":
+            self.class_idxs = df.img_filename.str.split(".").str[0].astype(int) - 1
 
         self.image_paths = [root_dir / x for x in df.img_filename.tolist()]
 
@@ -37,6 +39,16 @@ class WaterBirdDatasetInterface(BaseDatasetInterface):
             raise NotImplementedError(
                 "Please implement for class column 'background-fg'"
             )
+        elif self.class_column == "species":
+            self.instance_class_names = (
+                df.img_filename.str.split(".").str[1].apply(lambda x: x.split("/")[0])
+            )
+
+            lbl_to_class_map = {}
+            for lbl, class_name in zip(self.class_idxs, self.instance_class_names):
+                lbl_to_class_map[lbl] = class_name
+
+            self.class_names = [lbl_to_class_map[i] for i in range(200)]
 
     def get_class_names(self):
         return self.class_names
