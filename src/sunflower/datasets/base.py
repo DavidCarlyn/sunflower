@@ -39,8 +39,9 @@ class BasicTorchWithPathsDataset(BasicTorchDataset):
 
 
 class BaseDatasetInterface:
-    def __init__(self, root=None):
+    def __init__(self, root=None, class_column=None):
         self.root = root
+        self.class_column = class_column
         self._setup()
 
     @abstractmethod
@@ -91,7 +92,7 @@ class BaseDatasetInterface:
             )
 
     @abstractmethod
-    def get_class_names(self) -> int:
+    def get_class_names(self) -> list[str]:
         raise NotImplementedError(
             f"get_class_names function is not implemented in class {type(self).__name__}"
         )
