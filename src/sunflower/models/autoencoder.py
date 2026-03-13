@@ -6,7 +6,7 @@ import torchvision.transforms as T
 import torchvision.transforms.functional as F
 from diffusers import AutoencoderKL
 
-from sunflower.constants import SDVAEPretrainedModels
+from sunflower.utils import SDVAEPretrainedModels
 
 
 def load_diffusers_kl_vae(

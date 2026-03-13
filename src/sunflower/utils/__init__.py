@@ -7,4 +7,4 @@ from .basic import (
     set_tempdir,
     setup_notebook,
 )
-from .constants import DatasetNames, SDVAEPretrainedModels
+from .constants import HF_MODELS, DatasetNames, SDVAEPretrainedModels

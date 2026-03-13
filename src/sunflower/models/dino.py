@@ -50,6 +50,13 @@ class DINOFeatureExtractor(BaseFeatureExtractorInterface):
 
 
 class DINOv2FeatureExtractor(DINOFeatureExtractor):
+    def forward_spatial(self, x, **kwargs):
+        outputs = self.image_encoder(x)
+        feats = outputs[0]
+        # cls_token = feats[:, 0, :]
+        patch_tokens = feats[:, 1:, :]
+        return patch_tokens
+
     def forward(self, x, **kwargs) -> Any:
         outputs = self.image_encoder(x)
         feats = outputs[0]
