@@ -19,6 +19,7 @@ dependencies = [
     "rich",
     "saliency",
     "scipy",
+    "seaborn>=0.13.2",
     "torch",
     "torchvision",
     "tqdm",

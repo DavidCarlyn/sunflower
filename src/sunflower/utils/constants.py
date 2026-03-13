@@ -14,6 +14,10 @@ class DatasetNames(StrEnum):
     EGYPTIAN_PERSIAN = "EGYPTIAN_PERSIAN"
 
 
+class HF_MODELS(StrEnum):
+    DINOV2_BASE = "facebook/dinov2-base"
+
+
 class SDVAEPretrainedModels(StrEnum):
     SD15 = "runwayml/stable-diffusion-v1-5"
     OSTRIS = "ostris/vae-kl-f8-d16"
