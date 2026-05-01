@@ -10,17 +10,23 @@ requires-python = ">=3.12"
 dependencies = [
     "accelerate",
     "captum",
+    "decord>=0.6.0",
     "diffusers",
+    "einops>=0.8.2",
     "grad-cam",
     "ipykernel",
     "matplotlib",
     "pandas",
     "pip",
+    "pycocotools>=2.0.11",
     "rich",
     "saliency",
+    "sam3",
     "scipy",
     "seaborn>=0.13.2",
+    "timm>=1.0.25",
     "torch",
+    "torchaudio>=2.7.1",
     "torchvision",
     "tqdm",
     "trackio",
@@ -30,3 +36,6 @@ dependencies = [
 [build-system]
 requires = ["uv_build>=0.8.0,<0.9"]
 build-backend = "uv_build"
+
+[tool.uv.sources]
+sam3 = { git = "https://github.com/facebookresearch/sam3.git" }
